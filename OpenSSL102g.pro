@@ -20,4 +20,14 @@ else:unix: LIBS += -L$$PWD/lib/openssl/unix \
 #win32: install_.extra = del /F /Q "$$OUT_PWD/libeay32.dll"
 #INSTALLS = install_
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    encryptoraes256.cpp \
+    encryptorbase.cpp \
+    hasherbase.cpp \
+    hashsha512.cpp
+
+HEADERS += \
+    encryptoraes256.h \
+    encryptorbase.h \
+    hasherbase.h \
+    hashsha512.h
